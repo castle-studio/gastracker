@@ -13,6 +13,9 @@ import {
 import { Button, Root } from 'native-base';
 import Sidebar from './views/Sidebar';
 import Home from './views/Home';
+import Stations from './views/Stations';
+import Statistics from './views/Statistics';
+import Settings from './views/Settings';
 
 import { DrawerNavigator } from 'react-navigation';
 
@@ -25,7 +28,9 @@ const CustomDrawerContentComponent = (props) => (
 const Drawer = DrawerNavigator(
     {
       Home: { screen: Home },
-      SideBar: { screen: Sidebar },
+      Statistics: { screen: Statistics },
+      Stations: { screen: Stations },
+      Settings: { screen: Settings },
     },
     {
       initialRouteName: "Home",

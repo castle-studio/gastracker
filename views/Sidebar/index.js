@@ -26,23 +26,29 @@ const drawerImage = require("../../img/logo-kitchen-sink.png");
 
 const datas = [
 	{
-		name: "Anatomy",
-		route: "Anatomy",
+		name: "Home",
+		route: "Home",
 		icon: "phone-portrait",
 		bg: "#C5F442",
 	},
 	{
-		name: "Actionsheet",
-		route: "Actionsheet",
+		name: "Statistics",
+		route: "Statistics",
 		icon: "easel",
 		bg: "#C5F442",
 	},
 	{
-		name: "Header",
-		route: "Header",
+		name: "Stations",
+		route: "Stations",
 		icon: "phone-portrait",
 		bg: "#477EEA"
-		}
+	},
+	{
+		name: "Settings",
+		route: "Settings",
+		icon: "phone-portrait",
+		bg: "#477EEA"
+	}
 ];
 
 class SideBar extends Component {
@@ -58,13 +64,13 @@ class SideBar extends Component {
 		return (
 			<Container>
 				<Content bounces={false} style={{ flex: 1, backgroundColor: "#fff", top: -1 }}>
-					<Image source={drawerCover} style={styles.drawerCover}/>
+					<Image source={drawerCover} style={styles.drawerCover} />
 					<List
 						dataArray={datas}
 						renderRow={data =>
 							<ListItem button noBorder onPress={() => this.props.navigation.navigate(data.route)}>
 								<Left>
-									<Icon active name={data.icon} style={{ color: "#777"}} />
+									<Icon active name={data.icon} style={{ color: "#777" }} />
 									<Text style={styles.text}>
 										{data.name}
 									</Text>
