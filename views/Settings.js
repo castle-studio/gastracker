@@ -5,7 +5,7 @@ import {
     View
   } from 'react-native';
   import { DrawerNavigator } from 'react-navigation';
-  import { Container, Header, Left, Body, Right, Button, Icon, Title, Text } from 'native-base';
+  import { Container, Header, Left, Body, Right, Button, Icon, Title, Text, Content } from 'native-base';
   
 export default class Settings extends Component {
     

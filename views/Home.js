@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as strings from '../Data/Strings'
 import {
   Platform,
   StyleSheet,
@@ -32,11 +33,11 @@ export default class Home extends Component {
             <CardItem cardBody>
               <Image source={{ uri: 'Image URL' }} style={{ height: 200, width: null, flex: 1 }} />
             </CardItem>
-            <CardItem>
+            <CardItem style={ styles.CardItem}>
               <Left>
                 <Button transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>12 Likes</Text>
+                  <Icon active name="add" />
+                  <Text>{strings.add} </Text>
                 </Button>
               </Left>
               <Right>
@@ -49,3 +50,10 @@ export default class Home extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  CardItem: {
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+});
