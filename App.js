@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -16,6 +10,7 @@ import Home from './views/Home';
 import Stations from './views/Stations';
 import Statistics from './views/Statistics';
 import Settings from './views/Settings';
+import Map from './views/Tools/Map'
 
 import { DrawerNavigator } from 'react-navigation';
 
@@ -31,9 +26,10 @@ const Drawer = DrawerNavigator(
       Statistics: { screen: Statistics },
       Stations: { screen: Stations },
       Settings: { screen: Settings },
+      Map: { screen: Map },
     },
     {
-      initialRouteName: "Home",
+      initialRouteName: "Map",
       contentOptions: {
         activeTintColor: "#e91e63"
       },

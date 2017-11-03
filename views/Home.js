@@ -6,12 +6,12 @@ import {
   View,
   Image
 } from 'react-native';
+
+import Map from './Tools/Map'
 import { DrawerNavigator } from 'react-navigation';
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Text, Content, Card, CardItem, Thumbnail } from 'native-base';
 
 export default class Home extends Component {
-
-
   render() {
     return (
       <Container>
@@ -29,9 +29,11 @@ export default class Home extends Component {
           </Right>
         </Header>
         <Content>
-          <Card>
+          <View style={{ height: 500 }}>
+          <Map />
+
             <CardItem cardBody>
-              <Image source={{ uri: 'Image URL' }} style={{ height: 200, width: null, flex: 1 }} />
+
             </CardItem>
             <CardItem style={ styles.CardItem}>
               <Left>
@@ -44,7 +46,9 @@ export default class Home extends Component {
                 <Text>11h ago</Text>
               </Right>
             </CardItem>
-          </Card>
+          </View>
+
+
         </Content>
       </Container>
     );

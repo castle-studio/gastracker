@@ -42,6 +42,12 @@ const datas = [
 		route: "Stations",
 		icon: "phone-portrait",
 		bg: "#477EEA"
+	},	
+	{
+		name: "Map",
+		route: "Map",
+		icon: "phone-portrait",
+		bg: "#477EEA"
 	},
 	{
 		name: "Settings",
